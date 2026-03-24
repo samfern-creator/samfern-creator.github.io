@@ -1,2 +1,2 @@
-# samyfern-creator.github.io
+# samfern-creator.github.io
 Portfolio Wiki 
