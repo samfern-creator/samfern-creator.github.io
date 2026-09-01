@@ -627,8 +627,9 @@ footer span { color: var(--cyan); }
   </div>
   <div class="hero-text">
     <h1>hi, <span class="name">samantha</span> here.<span class="cursor"></span></h1>
-    <p class="hero-desc">I am a Biomedical Engineering graduate — born in Caracas, raised in New York. Curious, passionate, and driven to advance biochemical research, medical device innovation, and quality systems through creativity, science, and technology.</p>
+    <p class="hero-desc">I am a Biomedical Engineering graduate born in Caracas, raised in NYC. Curious, passionate, and driven to advance biochemical research, medical device innovation, and quality systems through creativity, science, and technology.</p>
     <a href="mailto:samanthafdpz@gmail.com" class="hero-btn">&#9993; &nbsp;Say hi!</a>
+    <a href="Samantha-Fernandez-Perez-Resume.pdf" target="_blank" rel="noopener" class="hero-btn" style="margin-left:12px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>Resume</a>
   </div>
 </section>
 
@@ -683,9 +684,9 @@ footer span { color: var(--cyan); }
         <h3>Research Intern <span class="at">@ Weill Cornell Medicine — Dept. of Epidemiology</span></h3>
         <div class="exp-date">JUN 2026 — AUG 2026 &middot; NEW YORK, NY</div>
         <ul class="exp-bullets">
-          <li>Preprocessing high-dimensional multi-omics TCGA-OV data and engineering women-specific clinical features (BRCA1/2, HRD, platinum response) to fine-tune the SeNMo deep learning model for ovarian cancer survival prediction.</li>
-          <li>Implementing and evaluating statistical and machine learning models in Python and PyTorch with stratified cross-validation, benchmarking against the published 0.518 C-index baseline.</li>
-          <li>Generating Kaplan-Meier curves and HGSOC subgroup analyses to interpret model performance and prepare research outputs for publication.</li>
+          <li>Reproduced the SeNMo pan-cancer multi-omics survival pipeline across all 33 TCGA cohorts — downloading and preprocessing six modalities (clinical, mutation, RPPA protein, gene expression, DNA methylation, miRNA) to the authors' specification — on the Cornell Cayuga HPC (Python, NumPy/pandas, Slurm).</li>
+          <li>Built an independent 13,958-patient &times; 87,670-feature pooled matrix and validated it against the published model: 99.97% patient overlap (9,164 of 9,167), exact clinical match, and a modality-by-modality feature cross-reference.</li>
+          <li>Goal: fine-tune SeNMo for a female-specific survival model, benchmarked with stratified cross-validation against the published 0.518 C-index baseline.</li>
         </ul>
       </div>
       <div class="exp-content" id="exp-1">
