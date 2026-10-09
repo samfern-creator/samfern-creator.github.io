@@ -682,7 +682,7 @@ footer span { color: var(--cyan); }
     <div>
       <div class="exp-content active" id="exp-0">
         <h3>Research Intern <span class="at">@ Weill Cornell Medicine — Dept. of Epidemiology</span></h3>
-        <div class="exp-date">JUN 2026 — AUG 2026 &middot; NEW YORK, NY</div>
+        <div class="exp-date">MAY 2026 — NOV 2026 &middot; NEW YORK, NY</div>
         <ul class="exp-bullets">
           <li>Reproduced the SeNMo pan-cancer multi-omics survival pipeline across all 33 TCGA cohorts — downloading and preprocessing six modalities (clinical, mutation, RPPA protein, gene expression, DNA methylation, miRNA) to the authors' specification — on the Cornell Cayuga HPC (Python, NumPy/pandas, Slurm).</li>
           <li>Built an independent 11,127-patient &times; 81,240-feature matrix — within 0.7% of the published 80,697 — and validated it against the authors' model: two of six omics matched exactly, with patient-level containment against the released cohort and a modality-by-modality feature cross-reference.</li>
@@ -755,10 +755,21 @@ footer span { color: var(--cyan); }
       <button class="carousel-nav prev" onclick="event.stopPropagation(); window.carousel(-1)">&#8249;</button>
       <button class="carousel-nav next" onclick="event.stopPropagation(); window.carousel(1)">&#8250;</button>
     </div>
+    <div id="featured-2" class="featured-project" style="display:none;" onclick="window.openLightbox(this.dataset.src)" data-src="senmo-poster.png">
+      <img src="senmo-poster.png" class="featured-img" alt="SeNMo reproduction poster" />
+      <div class="featured-overlay">
+        <h3>Reproducing SeNMo Across the TCGA Pan-Cancer Atlas</h3>
+        <p>A faithful, HPC-scale re-implementation of the SeNMo multi-omics survival preprocessing pipeline — 33 cohorts, 6 omics, 81,240 features — within 0.7% of the published model.</p>
+        <div><span class="tag cyan">Multi-Omics</span><span class="tag purple">Survival Analysis</span><span class="tag yellow">HPC / Slurm</span><span class="tag pink">Reproducibility</span></div>
+      </div>
+      <button class="carousel-nav prev" onclick="event.stopPropagation(); window.carousel(-1)">&#8249;</button>
+      <button class="carousel-nav next" onclick="event.stopPropagation(); window.carousel(1)">&#8250;</button>
+    </div>
   </div>
   <div class="carousel-dots">
     <div class="dot active" onclick="window.goToSlide(0)"></div>
     <div class="dot" onclick="window.goToSlide(1)"></div>
+    <div class="dot" onclick="window.goToSlide(2)"></div>
   </div>
 </section>
 
@@ -893,7 +904,7 @@ window.showExp = function(index, el) {
 
 // Carousel
 var currentSlide = 0;
-var totalSlides = 2;
+var totalSlides = 3;
 
 window.goToSlide = function(n) {
   currentSlide = n;
