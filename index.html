@@ -671,70 +671,85 @@ footer span { color: var(--cyan); }
 
 <section id="experience" style="max-width:1100px;margin:0 auto;">
   <div class="section-title"><h2><span class="slash">/</span> experience</h2></div>
-
-  <!-- WCM rich showcase -->
-  <div class="igem-grid" style="margin-bottom:80px;">
-    <div class="igem-photo">
-      <img src="wcm-photo.jpg" alt="Samantha Fernandez Perez at Weill Cornell Medicine" onclick="window.openLightbox('wcm-photo.jpg')" />
-      <p style="color:var(--muted);font-size:0.75rem;margin-top:8px;text-align:center;">Weill Cornell Medicine, NY &mdash; click to enlarge</p>
+  <div class="exp-layout">
+    <div class="exp-tabs">
+      <div class="exp-tab active" onclick="window.showExp(0,this)">WCM</div>
+      <div class="exp-tab" onclick="window.showExp(1,this)">UPSTATE MED</div>
+      <div class="exp-tab" onclick="window.showExp(2,this)">iGEM</div>
+      <div class="exp-tab" onclick="window.showExp(3,this)">HUBBARD BROOK</div>
+      <div class="exp-tab" onclick="window.showExp(4,this)">PEDIATRICS</div>
     </div>
-    <div class="igem-info">
-      <h3>Research Intern &mdash; Weill Cornell Medicine</h3>
-      <div class="igem-role">&#9658; DEPT. OF EPIDEMIOLOGY &middot; MAY 2026 &mdash; NOV 2026 &middot; NEW YORK, NY</div>
-      <p>Reproduced the <span style="color:var(--cyan);font-weight:600;">SeNMo multi-omics survival model's</span> full six-omic preprocessing pipeline across all 33 TCGA cancer cohorts on the Cornell Cayuga HPC &mdash; an 11,127 &times; 81,240 feature matrix within 0.7% of the published model &mdash; and probed its learned embeddings for demographic signal.</p>
-      <div class="igem-interview">
-        <p>Research Presentation</p>
-        <a href="SeNMo-Presentation.pdf" target="_blank"><img src="deck-slide1.png" alt="SeNMo research presentation &mdash; opening slide" style="width:100%;max-width:420px;border-radius:6px;border:1px solid var(--border);display:block;margin:8px 0 12px 0;" /></a>
-        <a href="SeNMo-Presentation.pdf" target="_blank">&#9658; &nbsp;View presentation &#8599;</a>
+    <div>
+      <div class="exp-content active" id="exp-0">
+        <h3>Research Intern <span class="at">@ Weill Cornell Medicine &mdash; Dept. of Epidemiology</span></h3>
+        <div class="exp-date">MAY 2026 &mdash; NOV 2026 &middot; NEW YORK, NY</div>
+        <ul class="exp-bullets">
+          <li>Reproduced the SeNMo pan-cancer multi-omics survival pipeline across all 33 TCGA cohorts &mdash; downloading and preprocessing six modalities (clinical, mutation, RPPA protein, gene expression, DNA methylation, miRNA) to the authors' specification &mdash; on the Cornell Cayuga HPC (Python, NumPy/pandas, Slurm).</li>
+          <li>Built an independent 11,127-patient &times; 81,240-feature matrix &mdash; within 0.7% of the published 80,697 &mdash; and validated it against the authors' model: two of six omics matched exactly, with patient-level containment against the released cohort and a modality-by-modality feature cross-reference.</li>
+          <li>Goal: fine-tune SeNMo for a female-specific survival model, benchmarked with stratified cross-validation against the published 0.518 C-index baseline.</li>
+        </ul>
+        <div style="display:flex;flex-wrap:wrap;gap:28px;margin-top:28px;align-items:flex-start;">
+          <div style="flex:1 1 240px;max-width:320px;">
+            <img src="wcm-photo.jpg" alt="Samantha Fernandez Perez at Weill Cornell Medicine" onclick="window.openLightbox('wcm-photo.jpg')" style="width:100%;border-radius:6px;border:1px solid var(--border);cursor:pointer;display:block;" />
+            <p style="color:var(--muted);font-size:0.72rem;margin-top:6px;text-align:center;">Weill Cornell Medicine, NY &mdash; click to enlarge</p>
+          </div>
+          <div style="flex:1 1 260px;">
+            <p style="color:var(--muted);font-size:0.78rem;margin:0 0 8px;letter-spacing:0.5px;">RESEARCH PRESENTATION</p>
+            <a href="SeNMo-Presentation.pdf" target="_blank"><img src="deck-slide1.png" alt="SeNMo research presentation &mdash; opening slide" style="width:100%;border-radius:6px;border:1px solid var(--border);display:block;" /></a>
+            <a href="SeNMo-Presentation.pdf" target="_blank" style="display:inline-block;margin-top:12px;font-family:'Space Mono',monospace;font-size:0.8rem;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:8px 16px;border-radius:4px;">&#9658; &nbsp;View presentation &#8599;</a>
+          </div>
+        </div>
+      </div>
+      <div class="exp-content" id="exp-1">
+        <h3>Research Assistant <span class="at">@ Upstate Medical University SUNY</span></h3>
+        <div class="exp-date">SEPT 2024 &mdash; OCT 2025 &middot; SYRACUSE, NY</div>
+        <ul class="exp-bullets">
+          <li>Developed a high-throughput screening system for prokaryotic-based peptide and protein libraries investigating binding interactions with SUMO and ULP proteins.</li>
+          <li>Applied advanced protein purification and molecular biology techniques to optimize experimental protocols and validate results, contributing to scalable therapeutic candidate identification.</li>
+          <li>Combined bench and in silico approaches by coupling wet lab biochemistry with supervised machine learning algorithms for protein purification process optimization.</li>
+          <li>Collaborated with the Biochemistry &amp; Molecular Biology department to leverage computational modeling and bioinformatics resources.</li>
+        </ul>
+      </div>
+      <div class="exp-content" id="exp-2">
+        <h3>President &amp; CEO <span class="at">@ iGEM Syracuse University</span></h3>
+        <div class="exp-date">JAN 2023 &mdash; DEC 2025 &middot; SYRACUSE, NY</div>
+        <ul class="exp-bullets">
+          <li>Founded Syracuse University's first iGEM team, establishing the organizational structure and recruiting a diverse, interdisciplinary team of students.</li>
+          <li>Led proposal development and submission process for international competition, promoting collaboration across departments.</li>
+          <li>Trained and mentored new team members on scientific workflows, compliance expectations, and organizational processes.</li>
+          <li>Managed project timelines, deliverables, and stakeholder communications across a multidisciplinary team.</li>
+        </ul>
+        <div style="display:flex;flex-wrap:wrap;gap:28px;margin-top:28px;align-items:flex-start;">
+          <div style="flex:1 1 240px;max-width:340px;">
+            <img src="igem-team.jpg" alt="iGEM Team Photo" onclick="window.openLightbox('igem-team.jpg')" style="width:100%;border-radius:6px;border:1px solid var(--border);cursor:pointer;display:block;" />
+            <p style="color:var(--muted);font-size:0.72rem;margin-top:6px;text-align:center;">Syracuse University iGEM Team &mdash; click to enlarge</p>
+          </div>
+          <div style="flex:1 1 260px;">
+            <p style="color:var(--muted);font-size:0.78rem;margin:0 0 8px;letter-spacing:0.5px;">iGEM INTERVIEW &amp; MEDIA</p>
+            <img src="images/IMG_8876.jpeg" alt="iGEM Syracuse &mdash; TV Interview" style="width:100%;border-radius:6px;border:1px solid var(--border);display:block;" />
+            <a href="https://youtu.be/jJSGKfpPVug" target="_blank" style="display:inline-block;margin-top:12px;font-family:'Space Mono',monospace;font-size:0.8rem;color:var(--purple);text-decoration:none;border:1px solid var(--purple);padding:8px 16px;border-radius:4px;">&#9658; &nbsp;Watch iGEM Interview &#8599;</a>
+          </div>
+        </div>
+      </div>
+      <div class="exp-content" id="exp-3">
+        <h3>Research Assistant <span class="at">@ HB Experimental Forest</span></h3>
+        <div class="exp-date">APR 2024 &mdash; AUG 2024 &middot; WOODSTOCK, NH</div>
+        <ul class="exp-bullets">
+          <li>Disseminated research on particulate organic carbon and nanoparticles in subsurface chemical interactions, analyzing seasonal, elevational, and horizontal variations.</li>
+          <li>Highlighted wollastonite's (CaSiO&#x2083;) role in mitigating acid rain impacts across watershed ecosystems.</li>
+          <li>Volunteered with TACNY STEM Trekkers Summer Camp on the effects of seasonal changes on lake stratification.</li>
+        </ul>
+      </div>
+      <div class="exp-content" id="exp-4">
+        <h3>Administrative Assistant <span class="at">@ Pediatrics Clinic</span></h3>
+        <div class="exp-date">AUG 2018 &mdash; JUNE 2021 &middot; QUEENS, NY</div>
+        <ul class="exp-bullets">
+          <li>Collaborated with clinical staff to optimize patient care protocols through meticulous room preparation and maintaining sterile environments.</li>
+          <li>Leveraged bilingual (English/Spanish) skills to bridge communication gaps between medical professionals and Spanish-speaking families.</li>
+          <li>Managed insurance documentation, billing coordination, and patient records with strict HIPAA compliance.</li>
+        </ul>
       </div>
     </div>
-  </div>
-
-  <!-- iGEM rich showcase -->
-  <div class="igem-grid" style="margin-bottom:80px;">
-    <div class="igem-photo">
-      <img src="igem-team.jpg" alt="iGEM Team Photo" onclick="window.openLightbox('igem-team.jpg')" />
-      <p style="color:var(--muted);font-size:0.75rem;margin-top:8px;text-align:center;">Syracuse University iGEM Team &mdash; click to enlarge</p>
-    </div>
-    <div class="igem-info">
-      <h3>iGEM President &amp; CEO</h3>
-      <div class="igem-role">&#9658; SYRACUSE UNIVERSITY &middot; JAN 2023 &mdash; DEC 2025</div>
-      <p>Founded and led Syracuse University's <span style="color:var(--purple);font-weight:600;">first-ever iGEM team</span>, establishing the organizational structure from scratch and recruiting a diverse, interdisciplinary group of students across biomedical engineering, chemistry, and computer science.</p>
-      <div class="igem-interview">
-        <p>iGEM Interview &amp; Media</p>
-        <img src="images/IMG_8876.jpeg" alt="iGEM Syracuse &mdash; TV Interview" style="width:100%;max-width:420px;border-radius:6px;border:1px solid var(--border);display:block;margin:8px 0 12px 0;" />
-        <a href="https://youtu.be/jJSGKfpPVug" target="_blank">&#9658; &nbsp;Watch iGEM Interview &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- further experience -->
-  <div style="border-left:2px solid var(--border);padding-left:28px;margin-bottom:40px;">
-    <h3 style="margin:0 0 6px 0;">Research Assistant <span style="color:var(--muted);font-weight:400;">&mdash; Upstate Medical University SUNY</span></h3>
-    <div class="igem-role" style="margin-bottom:14px;">&#9658; BIOCHEMISTRY &amp; MOLECULAR BIOLOGY &middot; SEP 2024 &mdash; OCT 2025 &middot; SYRACUSE, NY</div>
-    <ul class="exp-bullets" style="margin:0;">
-      <li>Developed a high-throughput screening system for prokaryotic-based peptide and protein libraries investigating binding interactions with SUMO and ULP proteins.</li>
-      <li>Applied advanced protein purification and molecular biology techniques to optimize experimental protocols and validate results, contributing to scalable therapeutic candidate identification.</li>
-      <li>Combined bench and in silico approaches by coupling wet lab biochemistry with supervised machine learning algorithms for protein purification process optimization.</li>
-    </ul>
-  </div>
-
-  <div style="border-left:2px solid var(--border);padding-left:28px;margin-bottom:40px;">
-    <h3 style="margin:0 0 6px 0;">Research Assistant <span style="color:var(--muted);font-weight:400;">&mdash; HB Experimental Forest</span></h3>
-    <div class="igem-role" style="margin-bottom:14px;">&#9658; HUBBARD BROOK &middot; APR 2024 &mdash; AUG 2024 &middot; WOODSTOCK, NH</div>
-    <ul class="exp-bullets" style="margin:0;">
-      <li>Analyzed seasonal and elevational variations in particulate organic carbon and subsurface nanoparticles, documenting wollastonite's (CaSiO&#x2083;) role in mitigating acid rain across watershed ecosystems.</li>
-      <li>Led TACNY STEM Trekkers Summer Camp sessions on lake stratification and seasonal water chemistry.</li>
-    </ul>
-  </div>
-
-  <div style="border-left:2px solid var(--border);padding-left:28px;">
-    <h3 style="margin:0 0 6px 0;">Administrative Assistant <span style="color:var(--muted);font-weight:400;">&mdash; Pediatrics Clinic</span></h3>
-    <div class="igem-role" style="margin-bottom:14px;">&#9658; PEDIATRICS &middot; AUG 2018 &mdash; JUN 2021 &middot; QUEENS, NY</div>
-    <ul class="exp-bullets" style="margin:0;">
-      <li>Supported clinical staff with sterile room preparation and patient care logistics across pediatric appointments.</li>
-      <li>Translated between English and Spanish for patient families, enabling clear communication during care decisions.</li>
-    </ul>
   </div>
 </section>
 
